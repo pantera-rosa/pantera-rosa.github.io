@@ -30,14 +30,23 @@
       </ul>
     </nav>
     <main>
-      <h1>METAR Data Visualizations</h1>
+      <h1>Results</h1>
       <div class="content">
-        <img src="images/metar1.png" alt="METAR vis placeholder" />
-        <p>Desc</p>
-      </div>
-      <div class="content">
-        <img src="images/metar2.png" alt="METAR vis placeholder" />
-        <p>Desc</p>
+        <h3>Model Evaluation</h3>
+        <p>
+          Due to the nature of our model (regression based analysis), the metric
+          utilized to measure its performance is its Root Mean Squared Error
+          (RMSE) calculated as exp(-RMSE/K), where K is a normalization factor
+          of 10, and exp is the exponential function in order for it to be a
+          number between 0.0 and 1.0, with 1.0 representing a perfect score
+          (RMSE = 0). As of 12/6/2024, our model scored 0.7.
+        </p>
+        <h3>Feature Importance</h3>
+        <p>
+          We performed a permutation based analysis to determine which features
+          were most important. Based on our analysis, the following features
+          were selected:
+        </p>
       </div>
     </main>
   </body>
