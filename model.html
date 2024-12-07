@@ -48,6 +48,33 @@
           approach as well. With a RMSE of 0.11 in predicting arrivals and
           departures, this model demonstrates strong performance.
         </p>
+
+        <h3>Model</h3>
+        <h4>Implementation</h4>
+        <p>
+          The data we were provided is in a time series format. In order to
+          account for the dimension of time, we utilized a recurrent neural
+          network. RNNs capture time steps in hidden layers, which is critical
+          when trying to analyze how data evolves w.r.t. temporal conditions. In
+          our case, we are dealing with both short and long term time
+          dependencies, where we need to not just capture micro changes per hour
+          but also macro changes like meteorological differences per season. For
+          this, we built an LSTM to capture these long term dependencies
+          specifically.
+        </p>
+        <p>
+          creation of xarray for 3d representation of time series -
+          samples,timesteps,features
+        </p>
+        <h4>Challenges</h4>
+        <p>
+          mention model acting as baseline and only giving averages prior to
+          making time cyclic
+        </p>
+        <p>mention joining all data together</p>
+
+        <h3>Hyperparameter Tuning</h3>
+        <p>mention manual tuning first</p>
       </div>
     </main>
   </body>
