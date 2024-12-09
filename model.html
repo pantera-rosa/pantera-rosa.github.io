@@ -45,6 +45,26 @@
           season. For this, we built an LSTM to capture these long term
           dependencies specifically.
         </p>
+        <p>
+          The training/validation split was 80/20, stratified by airport and
+          month. Our model consists of the following:
+        </p>
+        <ol>
+          <li>Batch Normalization Layer: to normalize all features</li>
+          <li>
+            Time Distributed Layer: relu activation to capture non-linear
+            patterns with an L2 regularizer which penalizes large weights and
+            prevents overfitting
+          </li>
+          <li>
+            LSTM Layers: to capture long term dependencies, going down in number
+            of units as each layer is applied to refine patterns, with a dropout
+            set to prevent overfitting
+          </li>
+          <li>
+            Dropout Layer: prevents overfitting and improves generalization
+          </li>
+        </ol>
 
         <h4>Challenges</h4>
         <p>
