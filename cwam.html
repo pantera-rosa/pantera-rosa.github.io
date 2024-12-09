@@ -31,22 +31,32 @@
       </ul>
     </nav>
     <main>
-      <h1>Terminal Aerodrome Forecast (TAF) Data</h1>
+      <h1>Convective Weather Avoidance Model (CWAM) Data</h1>
       <h3>Context</h3>
-      <p></p>
+      <p>
+        CWAM (Convective Weather Avoidance Model) data provide forecast on the
+        potential impact of convective weather. For each time of prediction, the
+        data is a list of polygons at a specific altitude within which there is
+        a percentage of chance greater than 60, 70, 80% to be impacted by
+        convective weather. Polygons are represented by a list of their vertices
+        in latitude, longitude (degrees). Forecasts are produced in general
+        every 15 minutes and each forecast is made up to 2 hours in the future
+        with a 5-minute interval. CWAM data are stored as compressed HDF5 files
+        (.h5) with BZIP2 compression (.bz2).
+      </p>
 
       <h3>Findings</h3>
       <div class="content">
-        <img src="images/cwam1.png" alt="Avg wind speed by hour of day" />
-      </div>
-      <div class="content">
         <img
-          src="images/cwam2.png"
-          alt="Wind gust difference distribution by airport"
+          src="images/cwam1.png"
+          alt="Distribution of total polygon counts"
         />
       </div>
       <div class="content">
-        <img src="images/cwam3.png" alt="Wind direction distribution" />
+        <img src="images/cwam2.png" alt="total number of polygons over time" />
+      </div>
+      <div class="content">
+        <img src="images/cwam3.png" alt="Avg convective activity heatmap" />
       </div>
       <div class="content">
         <img src="images/cwam4.png" alt="" />
