@@ -44,8 +44,31 @@
         with a 5-minute interval. CWAM data are stored as compressed HDF5 files
         (.h5) with BZIP2 compression (.bz2).
       </p>
+      <p>
+        This type of data is extremely important to our model's predictions.
+        Convection produces conditions that impact flight conditions -
+        lightning, heavy rain, icing, hail, and turbulence - and is the number 1
+        reason for delays in the U.S. National Airspace System.
+      </p>
+      <div class="content">
+        <img
+          src="images/nas_chart_1.png"
+          alt="Breakdown of most common causes of flight delays"
+        />
+      </div>
 
       <h3>Findings</h3>
+      <div class="content">
+        <img src="images/cwam3.png" alt="Avg convective activity heatmap" />
+        <p>
+          As expected, convective activity is more frequent at flight level 250,
+          which is approximately 25,000 feet. Convection requires both moisture
+          and instability, and both of these characteristics are more common at
+          lower altitudes, since dryness and coldness increases and altitude
+          increases. This is also where you are most likely to experience
+          turbulence.
+        </p>
+      </div>
       <div class="content">
         <img
           src="images/cwam1.png"
@@ -55,9 +78,7 @@
       <div class="content">
         <img src="images/cwam2.png" alt="total number of polygons over time" />
       </div>
-      <div class="content">
-        <img src="images/cwam3.png" alt="Avg convective activity heatmap" />
-      </div>
+
       <div class="content">
         <img src="images/cwam4.png" alt="" />
       </div>
