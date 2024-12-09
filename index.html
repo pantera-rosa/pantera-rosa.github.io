@@ -36,24 +36,27 @@
 
       <h3>Background</h3>
       <p>
-        During peak times, the FAA is monitoring and directing over 5,000
-        flights at any given minute. Every day, FAA's Air Traffic Organization
-        (ATO) provides service to more than 45,000 flights and 2.9 million
-        airline passengers across more than 29 million square miles of airspace.
-        With over 10,000,000 scheduled passenger flights yearly, it is crucial
-        that we understand all the factors that impact flight time and flight
-        arrivals.
+        During peak periods, the Federal Aviation Administration (FAA) monitors
+        and directs over 5,000 flights simultaneously. Every day, FAA's Air
+        Traffic Organization (ATO) provides service to more than 45,000 flights
+        and 2.9 million airline passengers across more than 29 million square
+        miles of airspace. With over 10,000,000 scheduled passenger flights
+        yearly, it is crucial that we understand all the factors that impact
+        flight time and flight arrivals.
       </p>
 
       <h3>The Challenge</h3>
       <p>
-        The objective of this challenge is to develop a regression model that
-        can accurately forecast with greater accuracy the number of arrivals
-        (throughput) of US airports into the near future using existing
-        estimated arrivals and weather forecast information. More formally,
-        given an airport ABC, and a timestamp T, what is the expected number of
-        arriving flights (throughput) in the next 3 hours with a resolution of
-        15-minutes time buckets.
+        This challenge aims to develop a regression model capable of accurately
+        forecasting the number of flight arrivals (throughput) at U.S. airports
+        within a short-term timeframe. Specifically, the task is to predict,
+        given an airport ABCABC and a timestamp TT, the expected number of
+        arriving flights within the next three hours, segmented into 15-minute
+        intervals. Accurate throughput predictions are essential for optimizing
+        the utilization of airport resources, runways, and the broader National
+        Airspace System (NAS). This enables air traffic management systems to
+        better handle the constraints imposed by limited capacity, especially
+        during periods of high demand or adverse weather conditions.
       </p>
       <div class="content">
         <img
@@ -69,17 +72,21 @@
 
       <h3>Preexisting Research</h3>
       <p>
-        There have been previous attempts at predicting thoroughput via machine
-        learning. One study,
+        Previous research has explored the use of machine learning to predict
+        airport throughput. One notable study,
         <a href="https://www.mdpi.com/2226-4310/11/1/78"
           >Prediction of Hourly Airport Operational Throughput with a
           Multi-Branch Convolutional Neural Network</a
-        >, utilized convective weather information from the NOAA and flight
-        trajectory data to train a multi-branch convolutional neural network
-        (MB-ResNet) to predict flight arrivals at KATL. This paper explicitly
-        mentions the importance of their weather tensor, convection indicators,
-        traffic flow data, and nominal path indicators, leading us to believe
-        that these features are likely to be relevant in our approach as well.
+        >, utilized convective weather data from the NOAA alongside flight
+        trajectory information to train a multi-branch convolutional neural
+        network (MB-ResNet) for forecasting flight arrivals at
+        Hartsfield–Jackson Atlanta International Airport (KATL). The study
+        emphasized the importance of incorporating weather tensors, convection
+        indicators, traffic flow data, and nominal path predictors as critical
+        features. These findings suggest that such factors are likely to play a
+        significant role in improving the performance of throughput prediction
+        models, providing a strong foundation for further exploration in this
+        domain.
       </p>
     </main>
   </body>

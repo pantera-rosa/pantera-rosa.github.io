@@ -38,21 +38,21 @@
           The data we were provided is in a time series format. In order to
           account for the dimension of time, we utilized a recurrent neural
           network. RNNs capture time steps in hidden layers, which is critical
-          when trying to analyze how data evolves w.r.t. temporal conditions. In
-          our case, we are dealing with both short and long term time
-          dependencies, where we need to not just capture micro changes per hour
-          but also macro changes like meteorological differences per season. For
-          this, we built an LSTM to capture these long term dependencies
-          specifically.
+          when trying to analyze how data evolves with respect to temporal
+          conditions. In our case, we are dealing with both short and long term
+          time dependencies, where we need to not just capture micro changes per
+          hour but also macro changes like meteorological differences per
+          season. For this, we built an LSTM to capture these long term
+          dependencies specifically.
         </p>
-        <p>
-          creation of xarray for 3d representation of time series -
-          samples,timesteps,features
-        </p>
+
         <h4>Challenges</h4>
         <p>
-          mention model acting as baseline and only giving averages prior to
-          making time cyclic
+          Our original model implementation returned mainly the average values
+          for thoroughput for each day, acting more like a baseline model than a
+          model that has learned anything of significance. This failure was due
+          to the depiction of time as linear instead of cyclic; by taking the
+          sine and cosine values of days and hours, we were able to
         </p>
         <p>mention joining all data together</p>
 
