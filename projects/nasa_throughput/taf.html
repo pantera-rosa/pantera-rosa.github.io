@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightHunters</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Data</a>
+          <div class="dropdown-content">
+            <a href="data.html">Overview</a>
+            <a href="cwam.html">CWAM</a>
+            <a href="taf.html">TAF</a>
+            <a href="metar.html">METAR</a>
+            <a href="fuser.html">FUSER</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">Model</a>
+          <div class="dropdown-content">
+            <a href="model.html">Design</a>
+            <a href="results.html">Results</a>
+          </div>
+        </li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Terminal Aerodrome Forecast (TAF) Data</h1>
+      <h3>Context</h3>
+      <p>
+        TAF (Terminal Aerodrome Forecast) is a format used to provide weather
+        forecasts specifically for aviation. TAF reports give a detailed
+        forecast for a 24 to 30-hour period and are updated every 6 hours. They
+        provide predictions about wind, visibility, weather phenomena, and cloud
+        cover that are crucial for planning flights. More information on the
+        structure of TAF data can be found
+        <a
+          href="https://www.pilotmall.com/blogs/news/how-to-read-a-taf-terminal-aerodrome-forecast"
+          >here</a
+        >.
+      </p>
+
+      <h3>Findings</h3>
+      <div class="content">
+        <p>
+          As covered in the data overview, information on wind is particularly
+          important to understand.
+        </p>
+        <img src="images/taf1.png" alt="Avg wind speed by hour of day" />
+        <p>
+          There is a 4-5 knot difference between the highest and lowest average
+          wind speeds for the top 10 most trafficked airports in the United
+          States.
+        </p>
+      </div>
+      <div class="content">
+        <img
+          src="images/taf2.png"
+          alt="Wind gust difference distribution by airport"
+        />
+        <p></p>
+      </div>
+      <div class="content">
+        <img src="images/taf3.png" alt="Wind direction distribution" />
+        <p></p>
+      </div>
+      <div class="content">
+        <img
+          src="images/taf4.png"
+          alt="Avg wind speed and visibility per month"
+        />
+        <p></p>
+      </div>
+    </main>
+  </body>
+</html>

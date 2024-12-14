@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightHunters</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Data</a>
+          <div class="dropdown-content">
+            <a href="data.html">Overview</a>
+            <a href="cwam.html">CWAM</a>
+            <a href="taf.html">TAF</a>
+            <a href="metar.html">METAR</a>
+            <a href="fuser.html">FUSER</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">Model</a>
+          <div class="dropdown-content">
+            <a href="model.html">Design</a>
+            <a href="results.html">Results</a>
+          </div>
+        </li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Convective Weather Avoidance Model (CWAM) Data</h1>
+      <h3>Context</h3>
+      <p>
+        CWAM (Convective Weather Avoidance Model) data provide forecast on the
+        potential impact of convective weather. For each time of prediction, the
+        data is a list of polygons at a specific altitude within which there is
+        a percentage of chance greater than 60, 70, 80% to be impacted by
+        convective weather. Polygons are represented by a list of their vertices
+        in latitude, longitude (degrees). Forecasts are produced in general
+        every 15 minutes and each forecast is made up to 2 hours in the future
+        with a 5-minute interval. CWAM data are stored as compressed HDF5 files
+        (.h5) with BZIP2 compression (.bz2).
+      </p>
+      <p>
+        This type of data is extremely important to our model's predictions.
+        Convection produces conditions that impact flight conditions -
+        lightning, heavy rain, icing, hail, and turbulence - and is the number 1
+        reason for delays in the U.S. National Airspace System.
+      </p>
+      <div class="content">
+        <img
+          src="images/nas_chart_1.png"
+          alt="Breakdown of most common causes of flight delays"
+        />
+      </div>
+
+      <h3>Findings</h3>
+      <div class="content">
+        <img src="images/cwam3.png" alt="Avg convective activity heatmap" />
+        <p>
+          As expected, convective activity is more frequent at flight level 250,
+          which is approximately 25,000 feet. Convection requires both moisture
+          and instability, and both of these characteristics are more common at
+          lower altitudes, since dryness and coldness increases and altitude
+          increases. This is also where you are most likely to experience
+          turbulence.
+        </p>
+      </div>
+      <div class="content">
+        <img src="images/cwam5.png" alt="weather point density" />
+        <p>
+          In the figure above, you can actually see the convective weather
+          activity per hour, and note how much more frequent convective weather
+          activity becomes in the evenings. This is a known phenomena with
+          events like thunderstorms.
+        </p>
+      </div>
+      <div class="content">
+        <img src="images/cwam4.png" alt="weather point density" />
+        <p>
+          In this visual, a high concentration of activity is evident near
+          Florida. Florida, with its hot, humid weather, peninsular shape, solar
+          heating, jet stream influence, and general instability, is a prime
+          spot for convective weather activity, and the data visualization
+          aligns with what is expected.
+        </p>
+      </div>
+      <div class="content">
+        <img
+          src="images/cwam1.png"
+          alt="Distribution of total polygon counts"
+        />
+      </div>
+      <div class="content">
+        <img src="images/cwam2.png" alt="total number of polygons over time" />
+      </div>
+    </main>
+  </body>
+</html>

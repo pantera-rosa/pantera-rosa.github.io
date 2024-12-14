@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightHunters</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Data</a>
+          <div class="dropdown-content">
+            <a href="data.html">Overview</a>
+            <a href="cwam.html">CWAM</a>
+            <a href="taf.html">TAF</a>
+            <a href="metar.html">METAR</a>
+            <a href="fuser.html">FUSER</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">Model</a>
+          <div class="dropdown-content">
+            <a href="model.html">Design</a>
+            <a href="results.html">Results</a>
+          </div>
+        </li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Results</h1>
+      <div class="content">
+        <h3>Model Evaluation</h3>
+        <p>
+          Due to the nature of our model (regression based analysis), the metric
+          utilized to measure its performance is its Root Mean Squared Error
+          (RMSE) calculated as exp(-RMSE/K), where K is a normalization factor
+          of 10, and exp is the exponential function in order for it to be a
+          number between 0.0 and 1.0, with 1.0 representing a perfect score
+          (RMSE = 0). As of 12/6/2024, our model scored 0.72.
+        </p>
+        <h3>Feature Importance</h3>
+        <p>
+          We performed a permutation based analysis to determine which features
+          were most important. Based on our analysis, the following features
+          were selected:
+        </p>
+        <ol>
+          <li>estimated_arrival_thoroughput</li>
+          <li>hour_sin</li>
+          <li>run_way_departure_count</li>
+          <li>hour_cos</li>
+          <li>airport_5</li>
+          <li>ETD_departure_count</li>
+          <li>airport_1</li>
+          <li>airport_6</li>
+          <li>airport_0</li>
+          <li>airport_9</li>
+        </ol>
+        <h3>Loss Plot</h3>
+        <div class="content">
+          <img src="loss.png" alt="Loss plot for our model" />
+          <p></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
