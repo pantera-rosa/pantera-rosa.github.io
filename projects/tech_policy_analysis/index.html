@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Policy Analysis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Data</a>
+          <div class="dropdown-content">
+            <a href="data.html">Overview</a>
+            <a href="cwam.html">CWAM</a>
+            <a href="taf.html">TAF</a>
+            <a href="metar.html">METAR</a>
+            <a href="fuser.html">FUSER</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropbtn">Model</a>
+          <div class="dropdown-content">
+            <a href="model.html">Design</a>
+            <a href="results.html">Results</a>
+          </div>
+        </li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>FlightHunters</h1>
+      <h2>The NASA Airport Thoroughput Prediction Challenge</h2>
+      <h5>Ilona Bodnar, Carol Sanchez Garibay, Fan Lin</h5>
+
+      <h3>Background</h3>
+      <p>
+        During peak periods, the Federal Aviation Administration (FAA) monitors
+        and directs over 5,000 flights simultaneously. Every day, FAA's Air
+        Traffic Organization (ATO) provides service to more than 45,000 flights
+        and 2.9 million airline passengers across more than 29 million square
+        miles of airspace.
+      </p>
+      <p>
+        According to the Bureau of Transportation Statistics (BTS), domestic
+        scheduled passenger arrivals grew by 23.7% between 2013 and 2023.
+        Landing is considered the most challenging phase of flight, accounting
+        for 48% of all aviation accidents. With over 10,000,000 scheduled
+        passenger flights yearly, factors such as weather conditions, runway
+        status, and aircraft characteristics can significantly impact arrival
+        times.
+      </p>
+
+      <h3>The Challenge</h3>
+      <p>
+        This challenge aims to develop a regression model capable of accurately
+        forecasting the number of flight arrivals (throughput) at U.S. airports
+        within a short-term timeframe. Specifically, the task is to predict,
+        given an airport ABC and a timestamp TT, the expected number of arriving
+        flights within the next three hours, segmented into 15-minute intervals.
+      </p>
+      <div class="content">
+        <img
+          src="images/fig1.png"
+          alt="Visualization of sliding windows for predictions"
+        />
+      </div>
+      <p>
+        Accurate throughput predictions are essential for optimizing the
+        utilization of airport resources, runways, and the broader National
+        Airspace System (NAS). This enables air traffic management systems to
+        better handle the constraints imposed by limited capacity, especially
+        during periods of high demand or adverse weather conditions.
+      </p>
+
+      <h3>Preexisting Research</h3>
+      <p>
+        Previous research has explored the use of machine learning to predict
+        airport throughput. One notable study,
+        <a href="https://www.mdpi.com/2226-4310/11/1/78"
+          >Prediction of Hourly Airport Operational Throughput with a
+          Multi-Branch Convolutional Neural Network</a
+        >, utilized convective weather data from the NOAA alongside flight
+        trajectory information to train a multi-branch convolutional neural
+        network (MB-ResNet) for forecasting flight arrivals at
+        Hartsfield–Jackson Atlanta International Airport (KATL). The study
+        emphasized the importance of incorporating weather tensors, convection
+        indicators, traffic flow data, and nominal path predictors as critical
+        features. These findings suggest that such factors are likely to play a
+        significant role in improving the performance of throughput prediction
+        models, providing a strong foundation for further exploration in this
+        domain.
+      </p>
+    </main>
+  </body>
+</html>
