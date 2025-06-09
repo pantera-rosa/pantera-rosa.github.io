@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artwork Details</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="artwork-container">
+      <a href="index.html" class="back-link">← Back to gallery</a>
+
+      <img id="artworkImage" class="artwork-image" src="" alt="" />
+      <h1 id="artworkTitle" class="artwork-title"></h1>
+      <p id="artworkDescription" class="artwork-description"></p>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const artworkId = parseInt(urlParams.get("id"));
+
+      fetch("artworks.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const artwork = data.artworks[artworkId];
+
+          if (artwork) {
+            document.getElementById(
+              "artworkImage"
+            ).src = `images/${artwork.filename}`;
+            document.getElementById("artworkImage").alt = artwork.title;
+            document.getElementById("artworkTitle").textContent = artwork.title;
+            
+            // Parse markdown-style links [text](url)
+            const description = artwork.description.replace(
+              /\[([^\]]+)\]\(([^)]+)\)/g,
+              '<a href="$2" target="_blank" style="color: #1abc9c;">$1</a>'
+            );
+            document.getElementById("artworkDescription").innerHTML = description;
+            document.title = `${artwork.title} - Art`;
+          } else {
+            document.querySelector(".artwork-container").innerHTML =
+              '<a href="index.html" class="back-link">← Back to gallery</a>' +
+              "<p>Artwork not found.</p>";
+          }
+        })
+        .catch((error) => {
+          console.error("Error loading artwork:", error);
+          document.querySelector(".artwork-container").innerHTML =
+            '<a href="index.html" class="back-link">← Back to gallery</a>' +
+            "<p>Error loading artwork. Please try again.</p>";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "artworks": [
+    {
+      "filename": "charango.png",
+      "title": "Charango",
+      "description": "This is a charango, a small stringed instrument native to the Andes. My grandpa, who lived in Jujuy, a province in the northern part of Argentina, gave this to me in 2025. It was created by the indigenous people of the area, the Quechua, in the 18th century post Spanish colonization."
+    },
+    {
+      "filename": "big_art.png",
+      "title": "Homage a Picasso",
+      "description": "This artwork is by [Orlando Diaz](https://www.puntoactual.com/orlandodiaz?lang=en). This is the first framed artwork I ever bought back in 2021, and I love its use of color and the postmodern homage to Picasso. In my mind, it's a queen finding peace in chaos. Unfortunately, since I bought it at a used local auction house, I have no idea what the original story is behind it or what the intent of the artist was, and I have not been able to track him down. Guests have said it looks like the queen of hearts, like Jesus Christ prior to his crucifixion with the crown of thorns, and, of course, \"like a Picasso.\""
+    },
+    {
+      "filename": "moon_goddess.png",
+      "title": "Moon Goddess",
+      "description": "Erwin Binder (American, 1934-1993), \"Moon Goddess,\" 1984, cast paper relief."
+    }
+  ]
+}

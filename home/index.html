@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">about my home</h1>
+
+      <div class="art-grid" id="artGrid">
+        <!-- Artworks will be dynamically loaded here -->
+      </div>
+    </div>
+
+    <script>
+      // Load artwork data and generate grid
+      fetch("artworks.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const grid = document.getElementById("artGrid");
+
+          data.artworks.forEach((artwork, index) => {
+            const link = document.createElement("a");
+            link.href = `artwork.html?id=${index}`;
+            link.className = "art-item";
+
+            const img = document.createElement("img");
+            img.src = `images/${artwork.filename}`;
+            img.alt = artwork.title;
+            img.loading = "lazy";
+
+            link.appendChild(img);
+            grid.appendChild(link);
+          });
+        })
+        .catch((error) => {
+          console.error("Error loading artworks:", error);
+          document.getElementById("artGrid").innerHTML =
+            "<p>Error loading artworks. Please refresh the page.</p>";
+        });
+    </script>
+  </body>
+</html>
