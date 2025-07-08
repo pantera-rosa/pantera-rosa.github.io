@@ -14,6 +14,31 @@
       "filename": "moon_goddess.png",
       "title": "Moon Goddess",
       "description": "Erwin Binder (American, 1934-1993), \"Moon Goddess,\" 1984, cast paper relief."
-    }
+    },
+    {
+      "filename": "independence_hall.png",
+      "title": "Independence Hall",
+      "description": "This early 20th century etching of Independence Hall in Pennsylvania is by [Anton Schutz](https://oldprintshop.com/artists/426)."
+    },
+    {
+      "filename": "capitol.png",
+      "title": "Washington, The Capitol",
+      "description": "This early 20th century etching of the Capitol building in Washington D.C. is by [Anton Schutz](https://oldprintshop.com/artists/426)."
+    },
+    {
+      "filename": "?.png",
+      "title": "?",
+      "description": "This early 20th century etching of the Capitol building in Washington D.C. is by [Anton Schutz](https://oldprintshop.com/artists/426)."
+    },
+    {
+      "filename": "?.png",
+      "title": "New Yorker Cover",
+      "description": "I don't read the New Yorker, but this was $5 with the frame included and it looks really nice."
+    },
+    {
+      "filename": "new_yorker.png",
+      "title": "View of the World from 9th Avenue",
+      "description": "Perception based map humor. As a girl born in Manhattan and raised elsewhere, the self importance of New Yorkers hasn't changed a bit in the last fifty years! Also, this was $5!"
+    } 
   ]
 }
