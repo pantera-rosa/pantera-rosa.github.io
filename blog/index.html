@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Ilona Bodnar</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>
+        <a href="../index.html" style="text-decoration: none; color: inherit"
+          >Ilona Bodnar</a
+        >
+      </h1>
+      <h3>Blog</h3>
+      <div id="blog-posts">
+        <p>Loading posts...</p>
+      </div>
+    </main>
+
+    <script>
+      async function loadBlogPosts() {
+        try {
+          const response = await fetch("posts.json");
+          const data = await response.json();
+          const postsContainer = document.getElementById("blog-posts");
+
+          if (data.posts.length === 0) {
+            postsContainer.innerHTML = "<p>No posts yet.</p>";
+            return;
+          }
+
+          const sortedPosts = data.posts.sort(
+            (a, b) => new Date(b.date) - new Date(a.date)
+          );
+          postsContainer.innerHTML = sortedPosts
+            .map(
+              (post) => `
+            <div style="margin-bottom: 30px;">
+              <h4 style="margin-bottom: 5px;">
+                <a href="post.html?id=${post.id}">${post.title}</a>
+              </h4>
+              <p style="color: #7f8c8d; font-size: 0.9em; margin: 5px 0;">
+                ${formatDate(post.date)}
+              </p>
+              ${post.excerpt ? `<p>${post.excerpt}</p>` : ""}
+            </div>
+          `
+            )
+            .join("");
+        } catch (error) {
+          console.error("Error loading blog posts:", error);
+          document.getElementById("blog-posts").innerHTML =
+            "<p>Error loading posts. Please try again later.</p>";
+        }
+      }
+
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
+
+      // Load posts when page loads
+      loadBlogPosts();
+    </script>
+  </body>
+</html>

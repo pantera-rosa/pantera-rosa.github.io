@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Blog Post - Ilona Bodnar</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>
+        <a href="../index.html" style="text-decoration: none; color: inherit"
+          >Ilona Bodnar</a
+        >
+      </h1>
+      <div id="post-content">
+        <p>Loading post...</p>
+      </div>
+      <div style="margin-top: 40px">
+        <a href="index.html">&larr; Back to all posts</a>
+      </div>
+    </main>
+
+    <script>
+      async function loadPost() {
+        try {
+          // Get post ID from URL query parameter
+          const urlParams = new URLSearchParams(window.location.search);
+          const postId = urlParams.get("id");
+
+          if (!postId) {
+            document.getElementById("post-content").innerHTML =
+              "<p>Post not found.</p>";
+            return;
+          }
+
+          // Fetch posts data
+          const response = await fetch("posts.json");
+          const data = await response.json();
+
+          // Find the requested post
+          const post = data.posts.find((p) => p.id === postId);
+
+          if (!post) {
+            document.getElementById("post-content").innerHTML =
+              "<p>Post not found.</p>";
+            return;
+          }
+
+          // Update page title
+          document.getElementById(
+            "page-title"
+          ).textContent = `${post.title} - Ilona Bodnar`;
+
+          // Display post content
+          document.getElementById("post-content").innerHTML = `
+            <h3>${post.title}</h3>
+            <p style="color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px;">
+              ${formatDate(post.date)}
+            </p>
+            <p>${post.content || "No content yet."}</p>
+          `;
+        } catch (error) {
+          console.error("Error loading post:", error);
+          document.getElementById("post-content").innerHTML =
+            "<p>Error loading post. Please try again later.</p>";
+        }
+      }
+
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
+
+      // Load post when page loads
+      loadPost();
+    </script>
+  </body>
+</html>

@@ -14,7 +14,7 @@ body {
   padding: 0;
   line-height: 1.6;
   color: #333;
-  background: #f8f8f8;
+  background: #fff;
 }
 
 nav {
@@ -77,8 +77,6 @@ main {
   margin: 2em auto;
   background: #fff;
   padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .content {
@@ -159,5 +157,4 @@ main {
   max-width: 800px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

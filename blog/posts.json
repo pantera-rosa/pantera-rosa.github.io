@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "id": "chain-derailment",
+      "title": "chain derailment",
+      "date": "2025-12-05",
+      "excerpt": "A 1x10 drivetrain is supposed to be sufficient for an amateur biker.",
+      "content": "A 1x10 drivetrain is supposed to be sufficient for a moderate biker. My current bike, a Cannondale Topstone 3 I named Inspector Clouseau, is the unfortunate corpus to a microSHIFT Sword gravel groupset with a 1x10 drivetrain. I really loved it for the first 300-400 miles I rode it, which makes sense given my past bike experience was on the 3-speed, 40 pound classic bicycles of Washington D.C.'s Capital Bikeshare program."
+    },
+    {
+      "id": "aws",
+      "title": "aws sagemaker",
+      "date": "2025-12-05",
+      "excerpt": "What should I do, run 8 SageMaker endpoints for 2 days or pay rent for six months?",
+      "content": ""
+    }
+  ]
+}
