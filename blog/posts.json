@@ -5,14 +5,23 @@
       "title": "chain derailment",
       "date": "2025-12-05",
       "excerpt": "Inspector Clouseau and cheaping out on gear.",
-      "content": "A 1x10 drivetrain is supposed to be sufficient for a moderate biker. My current bike, a Cannondale Topstone 3 I named Inspector Clouseau, is the unfortunate corpus to a microSHIFT Sword gravel groupset with a 1x10 drivetrain. I really loved it for the first 300-400 miles I rode it, which makes sense given my past bike experience was on the 3-speed, 40 pound classic bicycles of Washington D.C.'s Capital Bikeshare program. Anything feels lightweight and efficient compared to those beasts. However, the reality of my setup caught up to me when I was riding the Biwa-ichi loop. I chose this route as part of my Japan bike trip because it is relatively flat with the exception of a few short distance 7-8% grades. There aren't really 7-8% grades in the D.C. metro area - I can't think of any on my go-to routes at least - and my bike is just not set up for it. I don't know if it was the 1x10 drivetrain or the cheaply made microSHIFT components, but I found the hills to be awful and I hated having to hop off my bike and re-chain manually when the chain derailed on the steeper inclines."
+      "content": "A 1x10 drivetrain is supposed to be sufficient for a moderate biker. My current bike, a Cannondale Topstone 3 I named Inspector Clouseau, is the unfortunate corpus to a microSHIFT Sword gravel groupset with a 1x10 drivetrain. I really loved it for the first 300-400 miles I rode it, which makes sense given my past bike experience was on the 3-speed, 40 pound classic bicycles of Washington D.C.'s Capital Bikeshare program. Anything feels lightweight and efficient compared to those beasts. However, the reality of my setup caught up to me when I was riding the Biwa-ichi loop. I chose this route because it is relatively flat with the exception of a few short distance 7-8% grades. There aren't really 7-8% grades in the D.C. metro area - I can't think of any on my go-to routes at least - and my bike is just not set up for it. I don't know if it was the 1x10 drivetrain or the cheaply made microSHIFT components, but I found the hills to be awful and I hated having to hop off my bike and re-chain manually when the chain derailed on the steeper inclines."
     },
     {
       "id": "aws",
       "title": "aws sagemaker",
       "date": "2025-12-05",
       "excerpt": "What should I do, run 8 SageMaker endpoints for 2 days or pay rent for six months?",
-      "content": "While building out VulnGuard."
+      "content": "I implemented my first end-to-end machine learning pipeline on AWS with my team earlier this year. Anybody who knows me knows that I take any opportunity to be cheap. It's a game for me. "
+    },
+    {
+      "id": "sunshine",
+      "title": "super mario sunshine & the seto inland sea",
+      "date": "2025-12-06",
+      "excerpt": "There's more to Hiroshima than just memories of war.",
+      "content": "In 2006, a weird kid with a poor attention span and a natural inclination towards high-contrast, HDR-ed to shit visuals would discover the Nintendo Gamecube. Super Mario Sunshine is, without a doubt, the greatest game to ever exist in my universe. There's something about creatures and animating inanimate objects that just gets me. Portal has GLaDOS, Super Mario Sunshine has Shine Sprites and Piantas and the Flash Liquidizer Ultra Dousing Device (F.L.U.D.D.). Nintendo's storytelling capabilities aside, the gameplay is amazing and especially for its time, the designers did a really good job. There were large amounts of water, and water is notoriously difficult to portray in any visual medium. Just ask the Pixar folks who worked on The Good Dinosaur (https://www.slashfilm.com/540349/making-of-the-good-dinosaur/) and used over 17 terabytes for animating one water sequence - that's bigger than the entirety of Cars 2 - or any of the numerous researchers and artists consulted with making the water in Finding Nemo (https://www.awn.com/animationworld/finding-right-cg-water-and-fish-nemo). The Super Mario Sunshine team was limited to a fixed-function CPU in 2001 and really creatively designed their water effects to work within their constraints. They succeeded so well that their water designs were used in Nintendo game design for over a decade afterwards (https://blog.mecheye.net/2018/03/deconstructing-the-water-effect-in-super-mario-sunshine/). 
+      // 
+      // When I planned my bike trip to Japan, I was not thinking about Super Mario Sunshine at all, or at least no more than I usually do. I was so surprised when I reached the Seto Inland Sea, amongst the Hiroshima and Ehime prefectures, and began to see docks that looked exactly like Ricco Harbor."
     }
   ]
 }
