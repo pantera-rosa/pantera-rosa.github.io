@@ -4,7 +4,7 @@
       "id": "chain-derailment",
       "title": "chain derailment",
       "date": "2025-12-05",
-      "excerpt": "Inspector Clouseau and cheaping out on gear.",
+      "excerpt": "Bike chains don't derail as much as my train of thought but the act is irritating nonetheless.",
       "file": "chain-derailment.md"
     },
     {
@@ -20,6 +20,13 @@
       "date": "2025-12-06",
       "excerpt": "This is my weeb moment. The Nintendo Gamecube and biking Japan.",
       "file": "sunshine.md"
+    },
+    {
+      "id": "serpent",
+      "title": "serpents and serpent cubes",
+      "date": "2025-12-26",
+      "excerpt": "Are you any good at spatial reasoning?",
+      "file": "serpent.md"
     }
   ]
 }
