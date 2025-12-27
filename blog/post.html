@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="page-title">Blog Post - Ilona Bodnar</title>
     <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
     <main>
-      <h1>
-        <a href="../index.html" style="text-decoration: none; color: inherit"
-          >Ilona Bodnar</a
-        >
-      </h1>
       <div id="post-content">
         <p>Loading post...</p>
       </div>
@@ -24,7 +20,6 @@
     <script>
       async function loadPost() {
         try {
-          // Get post ID from URL query parameter
           const urlParams = new URLSearchParams(window.location.search);
           const postId = urlParams.get("id");
 
@@ -34,11 +29,9 @@
             return;
           }
 
-          // Fetch posts data
           const response = await fetch("posts.json");
           const data = await response.json();
 
-          // Find the requested post
           const post = data.posts.find((p) => p.id === postId);
 
           if (!post) {
@@ -47,18 +40,19 @@
             return;
           }
 
-          // Update page title
           document.getElementById(
             "page-title"
           ).textContent = `${post.title} - Ilona Bodnar`;
 
-          // Display post content
+          const markdownResponse = await fetch(post.file);
+          const markdownText = await markdownResponse.text();
+          const htmlContent = marked.parse(markdownText);
+
           document.getElementById("post-content").innerHTML = `
-            <h3>${post.title}</h3>
             <p style="color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px;">
               ${formatDate(post.date)}
             </p>
-            <p>${post.content || "No content yet."}</p>
+            <div>${htmlContent}</div>
           `;
         } catch (error) {
           console.error("Error loading post:", error);
@@ -76,7 +70,6 @@
         });
       }
 
-      // Load post when page loads
       loadPost();
     </script>
   </body>
