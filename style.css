@@ -158,3 +158,29 @@ main {
   background: #fff;
   border-radius: 8px;
 }
+
+#post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+#post-content figure {
+  max-width: 70%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+#post-content figure img {
+  width: 100%;
+  margin: 0;
+}
+
+#post-content figcaption {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-top: 0.5em;
+  line-height: 1.4;
+}
