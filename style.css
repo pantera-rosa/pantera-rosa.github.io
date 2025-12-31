@@ -184,3 +184,18 @@ main {
   margin-top: 0.5em;
   line-height: 1.4;
 }
+
+#post-content .image-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+#post-content .image-row img {
+  flex: 1;
+  max-width: calc(33.333% - 0.67em);
+  max-height: 15em;
+  height: auto;
+  margin: 0;
+}
