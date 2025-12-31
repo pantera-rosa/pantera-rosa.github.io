@@ -29,4 +29,4 @@ This company actually [specializes in anti-pirate shipbuilding design](https://g
   <figcaption>Mario proudly standing in front of Ricco Harbor.</figcaption>
 </figure>
 
-You can unlock Ricco Harbor pretty early on in the game, and the levels aren't that terrible to beat. The gameplay is fun and relatively relaxed - with the exception of the Blooper Surfing Safaris, which are considerably unpleasant - and that experience was mirrored as I biked around the Ehime prefecture.
+You can unlock Ricco Harbor pretty early on in the game, and the levels aren't that terrible to beat. The gameplay is fun and relatively relaxed - with the exception of the Blooper Surfing Safaris, which are considerably unpleasant - and that experience was replicated as I biked around the Ehime prefecture.
